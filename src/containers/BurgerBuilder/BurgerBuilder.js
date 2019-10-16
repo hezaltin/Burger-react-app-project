@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Aux from '../../hoc/Auxilary';
-import Burger from '../../components/Burger/Burger'
+import Burger from '../../components/Burger/Burger';
+import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 
 
 class BurgerBuilder extends Component {
@@ -11,11 +12,11 @@ class BurgerBuilder extends Component {
     // }  // another type to add the state inside the constructor
 
     state = {
-        ingeridents :{
-            sald:1,
-            bacon:1,
-            cheese:2,
-            meat:2
+        ingredients :{
+            sald:0,
+            bacon:3,
+            cheese:4,
+            meat:3
         }
     }
 
@@ -23,8 +24,8 @@ class BurgerBuilder extends Component {
         render(){
             return (
                 <Aux>
-                    <Burger ingeridents={this.state.ingeridents}></Burger>
-                    <div>Build Controls</div>
+                    <Burger ingredients={this.state.ingredients}></Burger>
+                   <BuildControls></BuildControls>
                 </Aux>
             );
         }
